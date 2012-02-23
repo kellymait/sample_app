@@ -17,10 +17,10 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 1.2.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,3 +36,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+group :test do
+  gem 'capybara', '1.1.2'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
+end
